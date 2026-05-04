@@ -1,0 +1,63 @@
+<section id="contatti" class="contact-section">
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+      <span>CONTATTACI</span>
+      <h2>Parliamo del tuo progetto</h2>
+
+      <p>
+        Siamo a tua disposizione per valutare insieme ogni intervento,
+        dalla progettazione alla realizzazione completa.
+        Contattaci direttamente oppure inviaci una richiesta tramite il form.
+      </p>
+
+      <div class="contact-details">
+        <div>
+          <strong>ELEVARE SRL</strong>
+          <p>Piazza XXV Aprile 14, Borgomanero (NO)</p>
+        </div>
+
+        <a href="tel:+390322097607">📞 +39 0322 097607</a>
+
+        <a href="tel:+39335284729" class="primary-call">
+          📱 +39 335 284729 (Chiama subito)
+        </a>
+
+        <a href="mailto:info@elevaresrl.com">✉️ info@elevaresrl.com</a>
+      </div>
+    </div>
+
+    <form name="contatti" method="POST" data-netlify="true" enctype="multipart/form-data" class="contact-form">
+      <input type="hidden" name="form-name" value="contatti">
+
+      <div class="form-row">
+        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+
+      <input type="text" name="oggetto" placeholder="Oggetto">
+
+      <textarea name="messaggio" placeholder="Scrivi il tuo messaggio" required></textarea>
+
+      <label class="file-upload">
+        <input type="file" name="allegato">
+        <span>+</span>
+        <div>
+          <strong>Allega un file</strong>
+          <small>Foto, planimetrie o documenti utili al progetto</small>
+        </div>
+      </label>
+
+      <label class="privacy-check">
+        <input type="checkbox" name="privacy" required>
+        <span>Accetto il trattamento dei dati personali ai fini della richiesta.</span>
+      </label>
+
+      <div class="submit-area">
+        <button type="submit" class="submit-btn">INVIA RICHIESTA</button>
+        <img src="image/main.jpg" alt="Elevare SRL" class="submit-logo">
+      </div>
+    </form>
+
+  </div>
+</section>

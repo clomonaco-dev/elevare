@@ -1,0 +1,271 @@
+.sales-hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background: #f4f2e8;
+  overflow: hidden;
+}
+
+.sales-hero-text {
+  background: #d9d6c4;
+  padding: 150px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sales-hero-text span,
+.sales-heading span,
+.sales-info span {
+  color: #8f1f18;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.sales-hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(58px, 7vw, 118px);
+  line-height: 0.9;
+  font-weight: 400;
+  color: #151821;
+  margin-bottom: 40px;
+}
+
+.sales-hero-text p {
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 38px;
+}
+
+.sales-btn,
+.sales-card-btn {
+  width: fit-content;
+  text-decoration: none;
+  background: #151821;
+  color: white;
+  padding: 17px 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+.sales-btn:hover,
+.sales-card-btn:hover {
+  background: #8f1f18;
+}
+
+.sales-hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 80px 80px;
+}
+
+.sales-hero-image img {
+  width: 100%;
+  height: 68vh;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.25);
+}
+
+.sales-projects {
+  background: #f4f2e8;
+  padding: 120px 70px;
+}
+
+.sales-heading {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.sales-heading h2,
+.sales-info h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(46px, 5vw, 82px);
+  line-height: 0.95;
+  font-weight: 400;
+  color: #151821;
+  margin-bottom: 25px;
+}
+
+.sales-heading p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.sales-grid {
+  display: grid;
+  gap: 50px;
+}
+
+.sales-card {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  background: #fff;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.14);
+}
+
+.sales-card-img {
+  min-height: 560px;
+}
+
+.sales-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sales-card-content {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sales-card-content span {
+  color: #8f1f18;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+
+.sales-card-content h3 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 0.95;
+  font-weight: 400;
+  color: #151821;
+  margin-bottom: 24px;
+}
+
+.sales-card-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.sales-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.sales-details div {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 15px;
+}
+
+.sales-details strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sales-details small {
+  font-size: 15px;
+  color: #555;
+}
+
+.pdf-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.pdf-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #151821;
+  background: #f4f2e8;
+  border-radius: 16px;
+  padding: 16px 18px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.pdf-list a:hover {
+  background: #d9d6c4;
+  transform: translateX(5px);
+}
+
+.pdf-list i {
+  color: #8f1f18;
+  font-size: 22px;
+}
+
+.sales-info {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 60px;
+  align-items: center;
+  background: #d9d6c4;
+  padding: 110px 70px;
+}
+
+.sales-info p {
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 760px;
+}
+
+.contact-section {
+  background: #0f131a;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .sales-hero,
+  .sales-card,
+  .sales-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-hero-text,
+  .sales-projects,
+  .sales-info {
+    padding: 120px 30px 55px;
+  }
+
+  .sales-hero-text h1 {
+    font-size: 56px;
+  }
+
+  .sales-hero-image {
+    padding: 40px 30px 70px;
+  }
+
+  .sales-hero-image img {
+    height: 380px;
+  }
+
+  .sales-card-img {
+    min-height: 340px;
+  }
+
+  .sales-card-content {
+    padding: 35px;
+  }
+
+  .sales-card-content h3 {
+    font-size: 42px;
+  }
+
+  .sales-details {
+    grid-template-columns: 1fr;
+  }
+}

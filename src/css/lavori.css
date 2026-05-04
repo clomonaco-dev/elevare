@@ -1,0 +1,279 @@
+/* =========================
+   LAVORI PAGE
+========================= */
+
+.works-3d-section {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #f4f2e8;
+  overflow: hidden;
+}
+
+/* =========================
+   TESTO
+========================= */
+
+.works-3d-left {
+  background: #d9d6c4;
+  padding: 150px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.works-3d-left span {
+  color: #8f1f18;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+
+.works-3d-left h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(58px, 6.5vw, 112px);
+  line-height: .9;
+  font-weight: 400;
+  color: #151821;
+  margin-bottom: 70px;
+}
+
+.works-3d-left p {
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+/* LISTA PREMIUM */
+
+.works-3d-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 26px;
+  max-width: 560px;
+}
+
+.works-3d-left li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #20242b;
+}
+
+.works-3d-left li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 12px;
+  height: 2px;
+  background: #8f1f18;
+}
+
+/* =========================
+   CAROUSEL 3D
+========================= */
+
+.works-3d-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 72%;
+  height: 58vh;
+  transform-style: preserve-3d;
+}
+
+.carousel-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 0 30px 80px rgba(0,0,0,.18);
+  transform: translateX(0) scale(.72);
+  transition: transform .65s ease, opacity .65s ease, filter .65s ease;
+  filter: brightness(.75);
+}
+
+.carousel-card.active {
+  opacity: 1;
+  z-index: 5;
+  transform: translateX(0) scale(1);
+  filter: brightness(1);
+  box-shadow: 0 35px 90px rgba(0,0,0,.28);
+}
+
+.carousel-card.next {
+  opacity: .32;
+  z-index: 2;
+  transform: translateX(55%) scale(.82);
+  filter: brightness(.72);
+}
+
+.carousel-card.prev {
+  opacity: .32;
+  z-index: 2;
+  transform: translateX(-55%) scale(.82);
+  filter: brightness(.72);
+}
+
+/* BOTTONI */
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #8f1f18;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 14px 35px rgba(0,0,0,.18);
+}
+
+.carousel-btn.prev {
+  left: 28px;
+}
+
+.carousel-btn.next {
+  right: 28px;
+}
+
+/* =========================
+   SECONDO BLOCCO INVERTITO
+========================= */
+
+.works-3d-section.reverse {
+  grid-template-columns: 60% 40%;
+  background: #f4f2e8;
+}
+
+.works-3d-section.reverse .works-3d-carousel {
+  order: 1;
+  padding-top: 70px;
+}
+
+.works-3d-section.reverse .works-3d-left {
+  order: 2;
+  background: #cfc8b2;
+}
+
+.works-3d-section.reverse .carousel-track {
+  width: 72%;
+  height: 58vh;
+}
+
+/* =========================
+   VARIANTE SCURA EVENTUALE
+========================= */
+
+.works-3d-dark {
+  background: #f4f2e8;
+}
+
+.works-3d-dark .works-3d-left span {
+  color: #8f1f18;
+}
+
+.works-3d-dark .works-3d-left h2 {
+  color: #151821;
+}
+
+.works-3d-dark .works-3d-left p,
+.works-3d-dark .works-3d-left li {
+  color: #20242b;
+}
+
+/* =========================
+   CONTATTI / ALTRE SEZIONI
+========================= */
+
+.contact-section {
+  background: #0f131a;
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .works-3d-section,
+  .works-3d-section.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .works-3d-section.reverse .works-3d-carousel,
+  .works-3d-section.reverse .works-3d-left {
+    order: initial;
+  }
+
+  .works-3d-left {
+    padding: 120px 30px 50px;
+  }
+
+  .works-3d-left h2 {
+    font-size: 58px;
+    margin-bottom: 45px;
+  }
+
+  .works-3d-left ul {
+    grid-template-columns: 1fr;
+  }
+
+  .works-3d-carousel {
+    min-height: 460px;
+    padding-top: 0;
+  }
+
+  .carousel-track,
+  .works-3d-section.reverse .carousel-track {
+    width: 78%;
+    height: 340px;
+  }
+
+  .carousel-card.next {
+    transform: translateX(45%) scale(.78);
+  }
+
+  .carousel-card.prev {
+    transform: translateX(-45%) scale(.78);
+  }
+
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+  }
+
+  .carousel-btn.prev {
+    left: 18px;
+  }
+
+  .carousel-btn.next {
+    right: 18px;
+  }
+}
