@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   await loadPartial("contact-placeholder", "partials/contact.html");
+
+  if (typeof initFileUpload === "function") {
+    initFileUpload();
+  }
 });
 
 async function loadPartial(id, path) {

@@ -945,3 +945,12 @@ body {
     bottom: 18px;
   }
 }
+
+.file-upload.active {
+  border-color: #2ecc71;
+}
+
+.file-upload.active .file-icon {
+  background: #2ecc71;
+  color: white;
+}
